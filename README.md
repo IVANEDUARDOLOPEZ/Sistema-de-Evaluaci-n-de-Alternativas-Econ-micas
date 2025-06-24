@@ -53,10 +53,6 @@ Donde:
 - Entre dos alternativas: Se selecciona la de mayor VPN
 
 
-
-
-
-
 **Universidad De El Salvador**  
 *Ingeniería de negocios*  
 *2025*
