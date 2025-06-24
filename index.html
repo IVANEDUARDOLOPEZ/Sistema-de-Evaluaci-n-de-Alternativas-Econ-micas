@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAE - Valor Presente Neto</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>Sistema de Evaluación de Alternativas Económicas</h1>
+                <h2>Método: Valor Presente Neto (VPN)</h2>
+            </div>
+            <div class="team-section">
+                <h3>Integrantes del equipo:</h3>
+                <ul>
+                    <li>Iván Eduardo López Tobar - LT22009</li>
+                    <li>Josué Daniel Rodríguez Yáñez - RY22001</li>
+                    <li>Christopher Alexis Velásquez Aguilar - VA22020</li>
+                    <li>Alejandra Michelle Mejía Rivas - MR22035</li>
+                    <li>Fabio Alexander Leiva Thez - LT22004</li>
+                </ul>
+            </div>
+        </header>
+
+        <main>
+            <section class="input-section">
+                <div class="project-input" id="project1">
+                    <h3><span class="project-letter">A</span> Proyecto A</h3>
+                    <div class="form-group">
+                        <label for="initialCost1">Costo Inicial ($):</label>
+                        <input type="number" id="initialCost1" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="discountRate1">Tasa de Descuento (%):</label>
+                        <input type="number" id="discountRate1" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="years1">Vida del Proyecto (años):</label>
+                        <input type="number" id="years1" min="1" required>
+                    </div>
+                    <div id="cashFlows1" class="cash-flows">
+                        <!-- Flujos de caja se generarán dinámicamente -->
+                    </div>
+                </div>
+
+                <div class="project-input" id="project2">
+                    <h3><span class="project-letter">B</span> Proyecto B</h3>
+                    <div class="form-group">
+                        <label for="initialCost2">Costo Inicial ($):</label>
+                        <input type="number" id="initialCost2" step="any" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="discountRate2">Tasa de Descuento (%):</label>
+                        <input type="number" id="discountRate2" step="0.01" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="years2">Vida del Proyecto (años):</label>
+                        <input type="number" id="years2" min="1" required>
+                    </div>
+                    <div id="cashFlows2" class="cash-flows">
+                        <!-- Flujos de caja se generarán dinámicamente -->
+                    </div>
+                </div>
+            </section>
+
+            <section class="actions">
+                <button id="calculateBtn">Calcular VPN</button>
+                <button id="exportBtn">Exportar Reporte</button>
+                <button id="clearBtn">Limpiar</button>
+            </section>
+
+            <section class="results">
+                <h3>Resultados</h3>
+                <div id="resultsContent"></div>
+            </section>
+        </main>
+
+        <footer>
+            <p>SEAE - Valor Presente Neto &copy; 2023 - Universidad Don Bosco</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
