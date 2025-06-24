@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEAE - Valor Presente Neto</title>
+    <title>SEAE - Evaluación Económica</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
@@ -12,7 +12,7 @@
         <header>
             <div class="header-content">
                 <h1>Sistema de Evaluación de Alternativas Económicas</h1>
-                <h2>Método: Valor Presente Neto (VPN)</h2>
+                <h2>Métodos: VPN, CAE y TIR</h2>
             </div>
             <div class="team-section">
                 <h3>Integrantes del equipo:</h3>
@@ -27,6 +27,17 @@
         </header>
 
         <main>
+            <section class="method-selection">
+                <div class="form-group">
+                    <label for="evaluationMethod">Método de evaluación:</label>
+                    <select id="evaluationMethod">
+                        <option value="vpn">Valor Presente Neto (VPN)</option>
+                        <option value="cae">Costo Anual Equivalente (CAE)</option>
+                        <option value="tir">Tasa Interna de Retorno (TIR)</option>
+                    </select>
+                </div>
+            </section>
+
             <section class="input-section">
                 <div class="project-input" id="project1">
                     <h3><span class="project-letter">A</span> Proyecto A</h3>
@@ -34,7 +45,7 @@
                         <label for="initialCost1">Costo Inicial ($):</label>
                         <input type="number" id="initialCost1" step="any" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group discount-rate-group">
                         <label for="discountRate1">Tasa de Descuento (%):</label>
                         <input type="number" id="discountRate1" step="0.01" required>
                     </div>
@@ -53,7 +64,7 @@
                         <label for="initialCost2">Costo Inicial ($):</label>
                         <input type="number" id="initialCost2" step="any" required>
                     </div>
-                    <div class="form-group">
+                    <div class="form-group discount-rate-group">
                         <label for="discountRate2">Tasa de Descuento (%):</label>
                         <input type="number" id="discountRate2" step="0.01" required>
                     </div>
@@ -68,7 +79,7 @@
             </section>
 
             <section class="actions">
-                <button id="calculateBtn">Calcular VPN</button>
+                <button id="calculateBtn">Calcular</button>
                 <button id="exportBtn">Exportar Reporte</button>
                 <button id="clearBtn">Limpiar</button>
             </section>
@@ -76,6 +87,7 @@
             <section class="results">
                 <h3>Resultados</h3>
                 <div id="resultsContent"></div>
+                <div id="methodExplanation"></div>
             </section>
         </main>
 

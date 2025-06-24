@@ -1,10 +1,10 @@
-/* Estilos generales */
 :root {
     --primary-color: #3498db;
     --secondary-color: #2c3e50;
     --success-color: #27ae60;
     --danger-color: #e74c3c;
     --warning-color: #f39c12;
+    --info-color: #1abc9c;
     --light-color: #ecf0f1;
     --dark-color: #34495e;
 }
@@ -83,6 +83,44 @@ header h2 {
     opacity: 0.9;
 }
 
+/* Method selection */
+.method-selection {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.method-selection .form-group {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.method-selection label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: var(--dark-color);
+    text-align: center;
+}
+
+.method-selection select {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1em;
+    background-color: white;
+    transition: all 0.3s;
+}
+
+.method-selection select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    outline: none;
+}
+
 /* Sección de entrada de datos */
 .input-section {
     display: flex;
@@ -158,6 +196,14 @@ header h2 {
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
     outline: none;
+}
+
+.discount-rate-group {
+    display: block;
+}
+
+.tir-method .discount-rate-group {
+    display: none;
 }
 
 .cash-flows {
@@ -269,12 +315,12 @@ button:active {
     font-weight: 500;
 }
 
-.vpn-positive {
+.vpn-positive, .cae-positive, .tir-positive {
     color: var(--success-color);
     border-left-color: var(--success-color);
 }
 
-.vpn-negative {
+.vpn-negative, .cae-negative, .tir-negative {
     color: var(--danger-color);
     border-left-color: var(--danger-color);
 }
@@ -288,6 +334,23 @@ button:active {
     border-radius: 6px;
     text-align: center;
     animation: pulse 2s infinite;
+}
+
+.method-explanation {
+    margin-top: 25px;
+    padding: 15px;
+    background-color: var(--light-color);
+    border-radius: 6px;
+    border-left: 4px solid var(--info-color);
+}
+
+.method-explanation h4 {
+    margin-top: 0;
+    color: var(--secondary-color);
+}
+
+.method-explanation p {
+    margin-bottom: 0;
 }
 
 @keyframes pulse {
